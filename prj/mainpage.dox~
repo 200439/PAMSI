@@ -1,0 +1,9 @@
+/*! \mainpage Sortowanie
+ *
+ * \author 200439
+ * \date 24.03.2014
+ *
+ * Program, w ktorym zaimplementowane sa algorytmy sortowania przez kopcowanie (heapsort) oraz sortowanie szybkie (quicksort). Mozna porownac takze czasy wykonywania tych algorytmow. Czas wykonania tych algorytmow zapisywany jest w plikach wynik_tab.csv oraz wynik_tab_2.csv.
+ *
+ * Kompilacja programu: make. Uruchomienie programu: ./sortowanie Do wielokrotnego uruchomienia programu sluzy plik otworz.sh. Aby uruchomic program w konsoli wpisac: ./otworz.sh > proces spowoduje to wyslanie danych do pliku 'proces'. 
+ */

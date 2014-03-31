@@ -1,0 +1,234 @@
+\hypertarget{classtablica}{\section{tablica \-Class \-Reference}
+\label{classtablica}\index{tablica@{tablica}}
+}
+
+
+\-Definicja klasy tablica.  
+
+
+
+
+{\ttfamily \#include $<$tablica.\-hh$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classtablica_a11a5b5b289a911579321b042cbad453b}{elementy} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em \-Czyta ile jest elementow tablicy. \end{DoxyCompactList}\item 
+\hypertarget{classtablica_a2950e64646edd3dc0df7e190774ae537}{int {\bfseries zwroc\-\_\-ilosc} ()}\label{classtablica_a2950e64646edd3dc0df7e190774ae537}
+
+\item 
+void \hyperlink{classtablica_a2e787e39230c5bdcfa4a5b853f949021}{wypelnij} ()
+\begin{DoxyCompactList}\small\item\em \-Czyta dane z pliku i zapisuje w tablicy. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_a2b47856f4150aa2386a56b4aef8f8f5a}{wyswietl} ()
+\begin{DoxyCompactList}\small\item\em \-Wyswietla tablice. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_acb57cdc80f4bea556af98343d280419b}{mnozenie} ()
+\begin{DoxyCompactList}\small\item\em \-Mnozy kazdy element tablicy razy 2. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_a26a5a71d013d0284ff0f6b7648444a5e}{zamien\-\_\-elementy} (int i, int j)
+\begin{DoxyCompactList}\small\item\em \-Zamienia element nr i oraz nr j miejscami. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_aad3f11f312e1e3205049f5154c70c9e6}{odwroc\-\_\-kolejnosc} ()
+\begin{DoxyCompactList}\small\item\em \-Odwraca kolejnosc tablicy. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_aa1f8d3f1ac7cb8a60b305173adb1ef70}{dodaj\-\_\-element} (int e)
+\begin{DoxyCompactList}\small\item\em \-Dodaje element podany jako argument (e) funkcji. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica_a1df0c5bb98c7a4eccc0cb1fa3662505d}{dodaj\-\_\-elementy} (\hyperlink{classtablica}{tablica} \&tab)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy tablicy podanej jako argument funkcji (tab) \end{DoxyCompactList}\item 
+bool \hyperlink{classtablica_ac45dd9db8adea1f232a1a8b43c9459bd}{operator==} (\hyperlink{classtablica}{tablica} \&\-Arg2)
+\begin{DoxyCompactList}\small\item\em \-Sprawdza czy tablice sa sobie rowne. \end{DoxyCompactList}\item 
+\hyperlink{classtablica}{tablica} \& \hyperlink{classtablica_abc23806d17b878996403eccdfda6f1ae}{operator+} (\hyperlink{classtablica}{tablica} \&tab2)
+\begin{DoxyCompactList}\small\item\em \-Dodaje elementy dwoch tablic. \end{DoxyCompactList}\item 
+\hyperlink{classtablica}{tablica} \& \hyperlink{classtablica_af37b5cf937e176c153c85c7f1958ef1d}{operator=} (\hyperlink{classtablica}{tablica} \&tab2)
+\begin{DoxyCompactList}\small\item\em \-Przypisuje kazdy element tablicy do tab2 podanej jako argument funkcji. \end{DoxyCompactList}\item 
+\hypertarget{classtablica_a399dff7d81480b6b0d1694bda2e66de8}{{\bfseries tablica} (const char $\ast$name)}\label{classtablica_a399dff7d81480b6b0d1694bda2e66de8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classtablica_af78b1ba93fce972d87e7ce98ae93c8cc}{int {\bfseries ilosc}}\label{classtablica_af78b1ba93fce972d87e7ce98ae93c8cc}
+
+\item 
+\hypertarget{classtablica_a3073633c65ed1e1972d93f8634181b13}{int {\bfseries ilosc\-\_\-pocz}}\label{classtablica_a3073633c65ed1e1972d93f8634181b13}
+
+\item 
+\hypertarget{classtablica_a6e013f692ac53ea0bd329cd5a6aeef27}{int {\bfseries pojemnosc}}\label{classtablica_a6e013f692ac53ea0bd329cd5a6aeef27}
+
+\item 
+\hypertarget{classtablica_affe37abf1ffc54241db0792b135c7b69}{int {\bfseries top}}\label{classtablica_affe37abf1ffc54241db0792b135c7b69}
+
+\item 
+\hypertarget{classtablica_a6733b3a13cea82d3e650af56c23ac976}{int $\ast$ {\bfseries tab\-\_\-1}}\label{classtablica_a6733b3a13cea82d3e650af56c23ac976}
+
+\item 
+\hypertarget{classtablica_a8a732fa361987ccec1dfcf35f21087dd}{const char $\ast$ {\bfseries nazwa}}\label{classtablica_a8a732fa361987ccec1dfcf35f21087dd}
+
+\item 
+\hypertarget{classtablica_adc72ca2e658dc620ee1d9a88de2349f4}{fstream {\bfseries plik}}\label{classtablica_adc72ca2e658dc620ee1d9a88de2349f4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Definicja klasy tablica. 
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtablica_aa1f8d3f1ac7cb8a60b305173adb1ef70}{\index{tablica@{tablica}!dodaj\-\_\-element@{dodaj\-\_\-element}}
+\index{dodaj\-\_\-element@{dodaj\-\_\-element}!tablica@{tablica}}
+\subsubsection[{dodaj\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::dodaj\-\_\-element} (
+\begin{DoxyParamCaption}
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)}}\label{classtablica_aa1f8d3f1ac7cb8a60b305173adb1ef70}
+
+
+\-Dodaje element podany jako argument (e) funkcji. 
+
+\-Tworzona jest tablica-\/bufor, przpisywana tablica na bufor, powiększana, przepisywana z buforu na tablice a nastepnie nastepuje wpisanie nowego elemnetu na tablice i zwalnianie buforu. \hypertarget{classtablica_a1df0c5bb98c7a4eccc0cb1fa3662505d}{\index{tablica@{tablica}!dodaj\-\_\-elementy@{dodaj\-\_\-elementy}}
+\index{dodaj\-\_\-elementy@{dodaj\-\_\-elementy}!tablica@{tablica}}
+\subsubsection[{dodaj\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::dodaj\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} \&}]{tab}
+\end{DoxyParamCaption}
+)}}\label{classtablica_a1df0c5bb98c7a4eccc0cb1fa3662505d}
+
+
+\-Dodaje elementy tablicy podanej jako argument funkcji (tab) 
+
+\-Funkcja wykorzystuje metode dodaj\-\_\-element \hypertarget{classtablica_a11a5b5b289a911579321b042cbad453b}{\index{tablica@{tablica}!elementy@{elementy}}
+\index{elementy@{elementy}!tablica@{tablica}}
+\subsubsection[{elementy}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tablica\-::elementy} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{classtablica_a11a5b5b289a911579321b042cbad453b}
+
+
+\-Czyta ile jest elementow tablicy. 
+
+\-Czyta pierwszy znak z pliku i sprawdza czy nie jest mniejszy od 0. \-Jesli tak -\/ program konczy dzialanie. \hypertarget{classtablica_acb57cdc80f4bea556af98343d280419b}{\index{tablica@{tablica}!mnozenie@{mnozenie}}
+\index{mnozenie@{mnozenie}!tablica@{tablica}}
+\subsubsection[{mnozenie}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::mnozenie} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica_acb57cdc80f4bea556af98343d280419b}
+
+
+\-Mnozy kazdy element tablicy razy 2. 
+
+\-Funkcja podwaja kazdy z elementow tablicy tab\-\_\-1 i zapisuje wynik w tej samej tablicy.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tab\-\_\-1\mbox{[}$\,$\mbox{]}} & -\/ tablica, ktorej elementy sa wymnazane przez 2 \\
+\hline
+{\em bufor} & -\/ tablica, do ktorej zapisywana jest kopia tab\-\_\-1 \\
+\hline
+{\em ilosc} & -\/ zmienna okreslajaca wielkosc tablicy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtablica_aad3f11f312e1e3205049f5154c70c9e6}{\index{tablica@{tablica}!odwroc\-\_\-kolejnosc@{odwroc\-\_\-kolejnosc}}
+\index{odwroc\-\_\-kolejnosc@{odwroc\-\_\-kolejnosc}!tablica@{tablica}}
+\subsubsection[{odwroc\-\_\-kolejnosc}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::odwroc\-\_\-kolejnosc} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica_aad3f11f312e1e3205049f5154c70c9e6}
+
+
+\-Odwraca kolejnosc tablicy. 
+
+\-Element ostatni staje sie pierwszym, przedostatni drugim itd. \hypertarget{classtablica_abc23806d17b878996403eccdfda6f1ae}{\index{tablica@{tablica}!operator+@{operator+}}
+\index{operator+@{operator+}!tablica@{tablica}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tablica} \& tablica\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} \&}]{tab2}
+\end{DoxyParamCaption}
+)}}\label{classtablica_abc23806d17b878996403eccdfda6f1ae}
+
+
+\-Dodaje elementy dwoch tablic. 
+
+\-Operator dodaje poszczegolne elementy dwoch tablic do siebie i zwraca tablice wynik. \hypertarget{classtablica_af37b5cf937e176c153c85c7f1958ef1d}{\index{tablica@{tablica}!operator=@{operator=}}
+\index{operator=@{operator=}!tablica@{tablica}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tablica} \& tablica\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} \&}]{tab2}
+\end{DoxyParamCaption}
+)}}\label{classtablica_af37b5cf937e176c153c85c7f1958ef1d}
+
+
+\-Przypisuje kazdy element tablicy do tab2 podanej jako argument funkcji. 
+
+\hypertarget{classtablica_ac45dd9db8adea1f232a1a8b43c9459bd}{\index{tablica@{tablica}!operator==@{operator==}}
+\index{operator==@{operator==}!tablica@{tablica}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool tablica\-::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf tablica} \&}]{tab2}
+\end{DoxyParamCaption}
+)}}\label{classtablica_ac45dd9db8adea1f232a1a8b43c9459bd}
+
+
+\-Sprawdza czy tablice sa sobie rowne. 
+
+\-Operator porownuje kazdy element tablicy i zwraca wartosc true jesli wszystkie elementy sa rowne albo false gdy nie sa. \hypertarget{classtablica_a2e787e39230c5bdcfa4a5b853f949021}{\index{tablica@{tablica}!wypelnij@{wypelnij}}
+\index{wypelnij@{wypelnij}!tablica@{tablica}}
+\subsubsection[{wypelnij}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::wypelnij} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica_a2e787e39230c5bdcfa4a5b853f949021}
+
+
+\-Czyta dane z pliku i zapisuje w tablicy. 
+
+\-Funkcja czyta dane z pliku, ignorujac pierwszy element (jest to liczba okreslajaca ilosc elementow tablicy), wpisuje je w poszczegolne elementy tablicy tab.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tab\-\_\-1\mbox{[}$\,$\mbox{]}} & -\/ tablica, do ktorej zapisywane sa kolejne liczby z pliku \\
+\hline
+{\em ilosc} & -\/ zmienna okreslajaca wielkosc tablicy \\
+\hline
+{\em nazwa} & -\/ zmienna okreslajaca nazwe pliku, z ktorego czytane sa liczby \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtablica_a2b47856f4150aa2386a56b4aef8f8f5a}{\index{tablica@{tablica}!wyswietl@{wyswietl}}
+\index{wyswietl@{wyswietl}!tablica@{tablica}}
+\subsubsection[{wyswietl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::wyswietl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica_a2b47856f4150aa2386a56b4aef8f8f5a}
+
+
+\-Wyswietla tablice. 
+
+\-Funkcja wyswietla tablice wczytana przez funkcje wypelnij.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em tab\-\_\-1\mbox{[}$\,$\mbox{]}} & -\/ tablica, ktora ma zostac wyswietlona \\
+\hline
+{\em ilosc} & -\/ zmienna okreslajaca wielkosc tablicy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classtablica_a26a5a71d013d0284ff0f6b7648444a5e}{\index{tablica@{tablica}!zamien\-\_\-elementy@{zamien\-\_\-elementy}}
+\index{zamien\-\_\-elementy@{zamien\-\_\-elementy}!tablica@{tablica}}
+\subsubsection[{zamien\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-::zamien\-\_\-elementy} (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)}}\label{classtablica_a26a5a71d013d0284ff0f6b7648444a5e}
+
+
+\-Zamienia element nr i oraz nr j miejscami. 
+
+\-Pomoc -\/ pomocnicza zmienna 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/piotr/\-Pulpit/\-P\-A\-M\-S\-I/\-L\-A\-B\-\_\-5\-\_\-\-Quicksort/\-G\-I\-T/\-L\-A\-B\-\_\-5/prj/\hyperlink{tablica_8hh}{tablica.\-hh}\item 
+/home/piotr/\-Pulpit/\-P\-A\-M\-S\-I/\-L\-A\-B\-\_\-5\-\_\-\-Quicksort/\-G\-I\-T/\-L\-A\-B\-\_\-5/prj/\hyperlink{tablica_8cpp}{tablica.\-cpp}\end{DoxyCompactItemize}

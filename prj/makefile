@@ -1,0 +1,24 @@
+__start__: sortowanie
+	./sortowanie
+
+sortowanie: tablica.o quick_sort.o quick_sort_2.o zegar.o main.o
+	c++ main.o tablica.o quick_sort.o quick_sort_2.o zegar.o -o sortowanie
+
+tablica.o: tablica.cpp
+	c++ -c tablica.cpp -o tablica.o
+
+quick_sort.o: quick_sort.cpp
+	c++ -c quick_sort.cpp -o quick_sort.o
+
+quick_sort_2.o: quick_sort_2.cpp
+	c++ -c quick_sort_2.cpp -o quick_sort_2.o
+
+zegar.o: zegar.cpp
+	c++ -c zegar.cpp -o zegar.o
+
+main.o: main.cpp
+	c++ -c main.cpp -o main.o
+
+clean:
+	rm -f *.o
+

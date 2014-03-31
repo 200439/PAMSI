@@ -1,0 +1,49 @@
+#include"quick_sort_2.hh"
+using namespace std;
+
+/*! \brief Zamienia elementy tablicy
+ * 
+ */
+void quick_sort_2::zamien(int *wartosc1, int *wartosc2) {
+    if (wartosc1 == wartosc2)
+        return;
+
+    int tmp = *wartosc1;
+    *wartosc1 = *wartosc2;
+    *wartosc2 = tmp;
+}
+
+/*! \brief Dzieli tablice
+ *
+ * Dzieli tablice na dwie czesci, w pierwszej wszystkie liczby sa mniejsze badz rowne x, w drugiej wieksze lub rowne od x. Kiedy i >= j
+ * zwracamy j jako punkt podzialu tablicy
+ * 
+ */
+int quick_sort_2::podzial(int *tab, int dlugosc)
+{
+    int i, pivot=0;
+    zamien(tab + (rand() % dlugosc), tab+(dlugosc-1));
+    for (i=0; i<dlugosc; ++i)
+    {
+        if (tab[i] < tab[dlugosc-1])
+            zamien(&tab[i], &tab[pivot++]);
+    }
+    zamien(&tab[pivot], &tab[dlugosc-1]);
+    return pivot;
+}
+
+
+/*! \brief Sortuje tablice algorytmem quick_sort
+ *
+ * Dzieli tablice na dwie czesci; pivot to punkt srodkowy. Wywoluje rekurencyjnie quick_sort dla pierwszej czesci tablicy oraz dla drugiej.
+ */
+void quick_sort_2::sortowanie(int *tab, int dlugosc) {
+    if (dlugosc < 2)
+        return;
+
+    int pivot = podzial(tab, dlugosc);
+	//cout<<"Pivot dla sort2: "<<pivot<<endl;
+    sortowanie(tab, pivot++);
+    sortowanie(&tab[pivot], dlugosc-pivot);
+}
+
