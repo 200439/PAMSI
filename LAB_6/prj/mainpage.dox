@@ -1,0 +1,9 @@
+/*! \mainpage Tablica asocjacyjna
+ *
+ * \author 200439
+ *
+ *
+ * Program, w ktorym zaimplementowana jest tablica asocjacyjna za pomoca struktury std::vector, ktorej elementami sa pary: klucz typu string i wartosc typu int. Program ten testuje wszystkie metody klasy tablica_asoc: dodawanie elementu, usuwanie elementu o podanym kluczu, pobieranie wartosci elementu na podstawie klucza, zmiana wartosci elementu i podawanie ile elementow zawiera tablica.
+ *
+ * Kompilacja programu: make. Uruchomienie programu: ./tab_asocjacyjna
+ */

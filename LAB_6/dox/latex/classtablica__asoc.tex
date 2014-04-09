@@ -1,0 +1,117 @@
+\hypertarget{classtablica__asoc}{\section{tablica\-\_\-asoc \-Class \-Reference}
+\label{classtablica__asoc}\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}}
+}
+
+
+\-Definicja klasy \hyperlink{classtablica__asoc}{tablica\-\_\-asoc}.  
+
+
+
+
+{\ttfamily \#include $<$tablica\-\_\-asoc.\-hh$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries para}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtablica__asoc_abdae1d4f67eb422e59045a8b75d0d0a1}{dodaj} (string k, int v)
+\begin{DoxyCompactList}\small\item\em \-Metoda dodajaca element (pare klucz typu string i wartosc int) do tablicy asocjacyjnej. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica__asoc_a4e9dfb13a9c37ce837763e34272afe26}{usun} (string k)
+\begin{DoxyCompactList}\small\item\em \-Metoda usuwajaca element tablicy asocjacyjnej. \end{DoxyCompactList}\item 
+int \hyperlink{classtablica__asoc_ada9b8ff8ef7473130cff88bba5cae391}{pobierz} (string k)
+\begin{DoxyCompactList}\small\item\em \-Metoda pobierajaca element o podanym w argumencie wywolania funkcji kluczu. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica__asoc_a8d076bc8d242a51350eaa0d2b48fce45}{zmien} (string k, int new\-\_\-v)
+\begin{DoxyCompactList}\small\item\em \-Metoda zamieniajaca dotychczasowa wartosc elementu na nowa. \end{DoxyCompactList}\item 
+int \hyperlink{classtablica__asoc_a826a82ad432aa764e0123148432ae856}{ile\-Elementow} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda zwracajaca ilosc elementow tablicy asocjacyjnej. \end{DoxyCompactList}\item 
+\hypertarget{classtablica__asoc_ab7e21787979b96508788f5b332fda722}{bool \hyperlink{classtablica__asoc_ab7e21787979b96508788f5b332fda722}{czy\-Pusta} ()}\label{classtablica__asoc_ab7e21787979b96508788f5b332fda722}
+
+\begin{DoxyCompactList}\small\item\em \-Metoda sprawdzajaca czy tablica jest pusta. \end{DoxyCompactList}\item 
+void \hyperlink{classtablica__asoc_afa708ebc355ff46308daffa4e4189a7a}{wyswietl} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda wyswietlajaca zawartosc tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Definicja klasy \hyperlink{classtablica__asoc}{tablica\-\_\-asoc}. 
+
+\-Klasa ta odpowiedzialna jest za stworzenie tablicy asocjacyjnej, ktorej kazdym elementem jest struktura para, zawierajaca klucz typu string oraz wartosc typu int. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classtablica__asoc_abdae1d4f67eb422e59045a8b75d0d0a1}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!dodaj@{dodaj}}
+\index{dodaj@{dodaj}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{dodaj}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-\_\-asoc\-::dodaj} (
+\begin{DoxyParamCaption}
+\item[{string}]{k, }
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_abdae1d4f67eb422e59045a8b75d0d0a1}
+
+
+\-Metoda dodajaca element (pare klucz typu string i wartosc int) do tablicy asocjacyjnej. 
+
+\-Dodaje element bedacy struktura para, a nastepnie dodaje go do wektora tablica. \hypertarget{classtablica__asoc_a826a82ad432aa764e0123148432ae856}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!ile\-Elementow@{ile\-Elementow}}
+\index{ile\-Elementow@{ile\-Elementow}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{ile\-Elementow}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tablica\-\_\-asoc\-::ile\-Elementow} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_a826a82ad432aa764e0123148432ae856}
+
+
+\-Metoda zwracajaca ilosc elementow tablicy asocjacyjnej. 
+
+\-Uzywa metody size(), wbudowanej do struktury vector \hypertarget{classtablica__asoc_ada9b8ff8ef7473130cff88bba5cae391}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!pobierz@{pobierz}}
+\index{pobierz@{pobierz}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{pobierz}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf tablica\-\_\-asoc\-::pobierz} (
+\begin{DoxyParamCaption}
+\item[{string}]{k}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_ada9b8ff8ef7473130cff88bba5cae391}
+
+
+\-Metoda pobierajaca element o podanym w argumencie wywolania funkcji kluczu. 
+
+\-Zwraca wartosc elementu o indeksie wyznaczonym za pomoca funkcji nr\-\_\-elementu. \hypertarget{classtablica__asoc_a4e9dfb13a9c37ce837763e34272afe26}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!usun@{usun}}
+\index{usun@{usun}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{usun}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-\_\-asoc\-::usun} (
+\begin{DoxyParamCaption}
+\item[{string}]{k}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_a4e9dfb13a9c37ce837763e34272afe26}
+
+
+\-Metoda usuwajaca element tablicy asocjacyjnej. 
+
+\-Uzywa funkcji nr\-\_\-elementu, by znalezc indeks wektora. \-Ten indeks wskazuje metodzie erase (wbudowanej do struktury vector) ktory element wektora usunac. \hypertarget{classtablica__asoc_afa708ebc355ff46308daffa4e4189a7a}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!wyswietl@{wyswietl}}
+\index{wyswietl@{wyswietl}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{wyswietl}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-\_\-asoc\-::wyswietl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_afa708ebc355ff46308daffa4e4189a7a}
+
+
+\-Metoda wyswietlajaca zawartosc tablicy. 
+
+\-Jest to metoda pomocnicza, pozwalajaca na podglad zawartosci tablicy na ekranie. \hypertarget{classtablica__asoc_a8d076bc8d242a51350eaa0d2b48fce45}{\index{tablica\-\_\-asoc@{tablica\-\_\-asoc}!zmien@{zmien}}
+\index{zmien@{zmien}!tablica_asoc@{tablica\-\_\-asoc}}
+\subsubsection[{zmien}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf tablica\-\_\-asoc\-::zmien} (
+\begin{DoxyParamCaption}
+\item[{string}]{k, }
+\item[{int}]{new\-\_\-v}
+\end{DoxyParamCaption}
+)}}\label{classtablica__asoc_a8d076bc8d242a51350eaa0d2b48fce45}
+
+
+\-Metoda zamieniajaca dotychczasowa wartosc elementu na nowa. 
+
+\-Do klucza podanego jako argument wywolania funkcji przypisywana jest nowa wartosc. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/piotr/\-Pulpit/\-P\-A\-M\-S\-I/\-L\-A\-B\-\_\-6\-\_\-\-Tablica\-\_\-asocjacyjna/prj/\hyperlink{tablica__asoc_8hh}{tablica\-\_\-asoc.\-hh}\item 
+/home/piotr/\-Pulpit/\-P\-A\-M\-S\-I/\-L\-A\-B\-\_\-6\-\_\-\-Tablica\-\_\-asocjacyjna/prj/\hyperlink{tablica__asoc_8cpp}{tablica\-\_\-asoc.\-cpp}\end{DoxyCompactItemize}
