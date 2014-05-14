@@ -1,0 +1,8 @@
+/*! \mainpage Grafy 1
+ *
+ * \author 200439
+ *
+ *
+ * Program, w ktorym zaimplementowany jest graf oraz dwie metody jego trawersowania - przeszukiwanie DFS oraz BFS.
+ * Kompilacja programu: make. Uruchomienie programu: ./graf
+ */
