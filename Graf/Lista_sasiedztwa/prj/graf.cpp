@@ -1,0 +1,141 @@
+#include "graf.hh"
+
+/*!
+ * \file
+ * \brief Plik zawierajacy definicje metod klasy graf
+ */
+
+using namespace std;
+
+/*!
+ * \brief Dodaje wierzcholek grafu
+ */
+void graf::dodaj_wierzcholek(int v) {
+	lista_sasiedztwa[v].push_back(v);
+}
+
+/*!
+ * \brief Dodaje krawedz grafu
+ */
+void graf::dodaj_krawedz(int v1, int v2, int w) {
+	wierzcholek nowy;
+		nowy.waga=w;
+		nowy.sasiad=v2;
+	lista_sasiadujaca[v1].push_back(nowy);
+	lista_sasiedztwa[v1].push_back(v2);
+
+	if (v1!=v2) {
+	nowy.sasiad=v1;
+	nowy.waga=w;
+	lista_sasiadujaca[v2].push_back(nowy);
+	lista_sasiedztwa[v2].push_back(v1);
+	}
+}
+
+/*!
+ * \brief Usuwa wierzcholek grafu
+ */
+void graf::usun_wierzcholek(int v) {
+	for (int i = 0; i < v; i++) {
+		lista_sasiedztwa[v].erase(lista_sasiedztwa[v].begin()+i);
+	}
+}
+
+/*!
+ * \brief Usuwa krawedz grafu
+ */
+void graf::usun_krawedz(int v1, int v2) {
+	wierzcholek nowy;
+	lista_sasiadujaca[v1].push_back(nowy);
+	lista_sasiedztwa[v1].push_back(0);
+
+	if (v1!=v2) {
+	lista_sasiadujaca[v2].push_back(nowy);
+	lista_sasiedztwa[v2].push_back(0);
+	}
+}
+
+/*!
+ * \brief Sprawdza, czy dwa wierzcholki v1 i v2 sa bezposrednio ze soba polaczone
+ */
+bool graf::czy_polaczone(int v1, int v2) {
+	vector<int>::iterator iter = lista_sasiedztwa[v1].begin(); 
+	for (iter; iter != lista_sasiedztwa[v1].end(); iter++) {
+	if (*iter==v2) return true;
+		else return false;
+		}
+}
+
+/*!
+ * \brief Wypisuje sasiedztwo wierzcholka v, czyli vierzcholki z ktorymi v jest bezposrednio polaczony
+ */
+void graf::sasiedztwo(int v) {
+	vector<int>::iterator iter=lista_sasiedztwa[v].begin();
+	for(iter; iter<=lista_sasiedztwa[v].end(); iter++) {
+		cout << endl << "Sasiedzi wierzcholka: " << *iter;
+		}
+}
+
+/* \b
+void graf::wyswietl() {
+	for (int i=0; i<rozmiar; i++) {
+	cout << endl <<" ";	
+		for (vector<int>::iterator iter = lista_sasiedztwa[i].begin(); iter<=lista_sasiedztwa[i].end(); iter++) {
+			cout<<*iter;
+			}
+		}
+}
+
+/* \brief Przeszukiwanie grafu w glab (DFS)
+ */
+void graf::DFSUnreach(int v1, int v2, bool odwiedzone[]) {	
+    odwiedzone[v1] = true;
+    cout << v1 << " ";
+    if(v1==v2) {
+  		quick_exit (EXIT_SUCCESS);
+    }
+    
+    vector<int>::iterator iter;
+    for(iter = lista_sasiedztwa[v1].begin(); iter != lista_sasiedztwa[v1].end(); iter++)
+	if(!odwiedzone[*iter])
+        DFSUnreach(*iter, v2, odwiedzone);
+}
+
+void graf::w_glab(int v1, int v2) {	
+    bool *odwiedzone = new bool[v1];
+    for(int i=0; i<v1; i++)
+        odwiedzone[i] = false;
+    DFSUnreach(v1, v2, odwiedzone);
+    cout<<endl;
+}
+
+/* \brief Przeszukiwanie grafu wszerz (BFS)
+ */ 
+void graf::wszerz(int v1, int v2) {
+    bool *odwiedzone=new bool[v1];
+    for(int i=0; i<v1; i++)
+        odwiedzone[i]=false;
+ 
+    list<int> kolejka;
+    odwiedzone[v1]=true;
+    kolejka.push_back(v1);
+ 
+    vector<int>::iterator iter;
+    while(!kolejka.empty()) {
+        v1=kolejka.front();
+        cout << v1 << " ";
+        if(v1==v2) {
+  			quick_exit (EXIT_SUCCESS);
+    	}
+        
+		kolejka.pop_front();
+ 
+        for(iter = lista_sasiedztwa[v1].begin(); iter != lista_sasiedztwa[v1].end(); iter++) {
+            if(!odwiedzone[*iter]) {
+                odwiedzone[*iter] = true;
+                kolejka.push_back(*iter);
+            }
+        }
+    }
+    cout<<endl;
+}
