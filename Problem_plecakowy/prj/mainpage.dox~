@@ -1,9 +1,9 @@
-/*! \mainpage Grafy - macierz sasiedztwa
+/*! \mainpage Problem plecakowy
  *
  * \author 200439
  *
  *
- * Program, w ktorym zaimplementowany jest graf oraz dwie metody jego trawersowania - przeszukiwanie DFS oraz BFS. Niestety nie udalo sie 
- * jeszcze zaimplementowac algorytmu A*, co zostanie zrobione w przyszlym tygodniu.
- * Kompilacja programu: make. Uruchomienie programu: ./graf
+ * Program, w ktorym zaimplementowany jest algorytm dynamiczny rozwiazania problemu plecakowego dla dwoch przypadkow: zlodzieja, chcacego 
+ * wyniesc jak najdrozsze lupy, oraz biwakowicza, ktory zabiera najbardziej przydatne przedmioty.
+ * Kompilacja programu: make. Uruchomienie programu: ./plecak
  */

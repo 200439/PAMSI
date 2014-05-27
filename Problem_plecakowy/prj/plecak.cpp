@@ -14,12 +14,10 @@ using namespace std;
  * upakowan plecaka (P).
  */ 
 plecak::plecak(int pojemnosc, int ilosc) {
-	pojemnosc_plecaka=pojemnosc; 
-	ilosc_przedmiotow=ilosc; 
+	pojemnosc_plecaka=pojemnosc; cout<<"POJEMNOSC PLECAKA: "<<pojemnosc_plecaka<<endl;
+	ilosc_przedmiotow=ilosc; cout<<"ILOSC RODZAJOW PRZEDMIOTOW: "<<ilosc_przedmiotow<<endl;
 
-	przedmioty->nazwa=new string[ilosc_przedmiotow];
-   	przedmioty->waga=new int[ilosc_przedmiotow];
-   	przedmioty->cena=new int[ilosc_przedmiotow];
+	przedmioty=new rzecz [ilosc_przedmiotow];
 	
 	Q=new int *[ilosc_przedmiotow+1];
 	   	for(int i=0; i<=ilosc_przedmiotow; ++i) {
@@ -39,13 +37,12 @@ plecak::plecak(int pojemnosc, int ilosc) {
  * Usuwa wszystkie tablice dynamiczne.
  */
 plecak::~plecak() {
-	delete [] przedmioty->nazwa;
-	delete [] przedmioty->waga;
-	delete [] przedmioty->cena;
-	for(int i=0; i<ilosc_przedmiotow+1; i++) delete [] P[i] ;
+	delete [] przedmioty;
+
+	for(int i=0; i<ilosc_przedmiotow+1; i++) delete [] P[i];
 	delete [] P;
 	
-	for(int i=0; i<ilosc_przedmiotow+1; i++) delete [] Q[i] ;
+	for(int i=0; i<ilosc_przedmiotow+1; i++) delete [] Q[i];
 	delete [] Q;
 }
 
@@ -57,11 +54,11 @@ void plecak::dodaj_przedmioty() {
 	for(int i=0; i<ilosc_przedmiotow; ++i) {
 		cout<<i+1<<". przedmiot:"<<endl;
         cout<<"NAZWA: ";
-        cin>>przedmioty->nazwa[i];
+        cin>>przedmioty[i].nazwa;
         cout<<"WAGA: ";
-        cin>>przedmioty->waga[i];
+        cin>>przedmioty[i].waga;
         cout<<"WARTOSC: ";
-        cin>>przedmioty->cena[i];
+        cin>>przedmioty[i].cena;
         cout<<endl;
     }
 }
@@ -75,27 +72,26 @@ void plecak::dodaj_przedmioty(string nazwy[], int wagi[], int ceny[]) {
 	for(int i=0; i<ilosc_przedmiotow; ++i) {
 		cout<<i+1<<". przedmiot:"<<endl;
         cout<<"NAZWA: ";
-        przedmioty->nazwa[i]=nazwy[i];
-		cout<<przedmioty->nazwa[i]<<endl;
+        przedmioty[i].nazwa=nazwy[i];
+		cout<<przedmioty[i].nazwa<<endl;
         cout<<"WAGA: ";
-        przedmioty->waga[i]=wagi[i];
-		cout<<przedmioty->waga[i]<<endl;
+        przedmioty[i].waga=wagi[i];
+		cout<<przedmioty[i].waga<<endl;
         cout<<"WARTOSC: ";
-        przedmioty->cena[i]=ceny[i];
-		cout<<przedmioty->cena[i]<<endl;
+        przedmioty[i].cena=ceny[i];
+		cout<<przedmioty[i].cena<<endl;
         cout<<endl;
     }
 }
 
 /* \brief Funkcja realizujaca algorytm dynamicznego wybierania optymalnego zapakowania plecaka
  *
- * Jego dzialanie wyjasnione jest w sprawozdaniu.
  */
 void plecak::algorytm_dynamiczny() {
 	for(int i=1; i<=ilosc_przedmiotow; ++i ) {
         for(int j=1; j<=pojemnosc_plecaka; ++j ) {
-            if((j>=przedmioty->waga[i-1])&&(P[i-1][j]<(P[i][j-przedmioty->waga[i-1]]+przedmioty->cena[i-1]))) {
-                P[i][j]=P[i][j-przedmioty->waga[i-1]]+przedmioty->cena[i-1];
+            if((j>=przedmioty[i-1].waga)&&(P[i-1][j]<(P[i][j-przedmioty[i-1].waga]+przedmioty[i-1].cena))) {
+                P[i][j]=P[i][j-przedmioty[i-1].waga]+przedmioty[i-1].cena;
                 Q[i][j]=i;
             }
             else {
@@ -108,7 +104,7 @@ void plecak::algorytm_dynamiczny() {
 
 /* \brief Funkcja wypisujaca tablice wartosci upakowan plecaka
  *
- * Ostatni element tej tablicy, to szukane rozwiazanie.'
+ * Ostatni element tej tablicy, to szukane rozwiazanie.
  */
 void plecak::wypisz_tablice() {
 	cout<<" Tablica wartosci upakowan plecaka: "<<endl;
@@ -118,20 +114,80 @@ void plecak::wypisz_tablice() {
     }
 }
 
-/* \brief Funkcja wypisujaca wynik dzialania algorytmu
+/* \brief Funkcja wypisujaca wynik dzialania algorytmu dynamicznego
  *
  * Wypisuje na ekran obliczona maksymalna laczna wartosc przedmiotow mieszczacych sie w plecaku. Ponadto wylistowuje jakie poszczegolne 
  * przedmioty znalazly sie w plecaku i jaka maja wartosc.
  */
-void plecak::wynik() {
-    cout<<"Maksymalna wartosc przedmiotow, ktore mieszcza sie w plecaku: "<<P[ilosc_przedmiotow][pojemnosc_plecaka]<<endl;
+void plecak::wynik_dynamiczny() {
+    cout<<endl<<"Maksymalna wartosc przedmiotow, ktore mieszcza sie w plecaku wg algorytmu dynamicznego: "<<P[ilosc_przedmiotow][pojemnosc_plecaka]<<endl;
 
 	cout<<"Przedmioty znajdujace sie w plecaku i ich wartosci:"<<endl;
 	
-	int i=1;
+	int lp=1;
+	int zapis_pojemnosc=pojemnosc_plecaka;
     while(pojemnosc_plecaka) {
-        cout<<i<<". "<<przedmioty->nazwa[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1]<<", wartosc: "<<przedmioty->cena[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1]<<endl;
-        pojemnosc_plecaka-=przedmioty->waga[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1];
-		i++;
+        cout<<lp<<". "<<przedmioty[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1].nazwa<<", wartosc: "<<przedmioty[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1].cena<<", waga: "<<przedmioty[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1].waga<<endl;
+        pojemnosc_plecaka-=przedmioty[Q[ilosc_przedmiotow][pojemnosc_plecaka]-1].waga;
+		lp++;
     }
+	pojemnosc_plecaka=zapis_pojemnosc;
+}
+
+/* \brief Funkcja realizujaca algorytm zachlannego wybierania optymalnego zapakowania plecaka
+ *
+ */
+void plecak::algorytm_zachlanny() {
+	//WYLICZANIE WARTOSCI: cena/waga
+	for(int i=0; i<ilosc_przedmiotow; ++i) przedmioty[i].cena_waga=(float)przedmioty[i].cena/(float)przedmioty[i].waga;
+	
+	//SORTOWANIE PRZEDMIOTOW WG WARTOSCI cena/waga
+	rzecz tmp;
+	for(int i=0; i<ilosc_przedmiotow-1; i++) {
+		for(int j=0; j<ilosc_przedmiotow-1; j++) {
+			if(przedmioty[j+1].cena_waga>przedmioty[j].cena_waga) {
+   	                tmp=przedmioty[j];
+   	                przedmioty[j]=przedmioty[j+1] ;
+                    przedmioty[j+1]=tmp;
+			}
+		}
+	} 
+
+	//PAKOWANIE PLECAKA
+	int licznik=pojemnosc_plecaka;
+	for(int i=0; i<ilosc_przedmiotow; ++i) {
+		if(przedmioty[i].ilosc*przedmioty[i].waga+przedmioty[i].waga<=licznik) {
+			przedmioty[i].ilosc=1;
+			while (przedmioty[i].ilosc*przedmioty[i].waga+przedmioty[i].waga<=licznik) {
+				przedmioty[i].ilosc++;
+			}
+		licznik=licznik-przedmioty[i].ilosc*przedmioty[i].waga;
+		}
+	}
+}
+
+/* \brief Funkcja wypisujaca wynik dzialania algorytmu zachlannego
+ *
+ * Wypisuje na ekran obliczona maksymalna laczna wartosc przedmiotow mieszczacych sie w plecaku. Ponadto wylistowuje jakie poszczegolne 
+ * przedmioty znalazly sie w plecaku i jaka maja wartosc.
+ */
+void plecak::wynik_zachlanny() {
+	int wartosc=0;
+	for(int i=0; i<ilosc_przedmiotow; ++i) {
+		wartosc=wartosc+przedmioty[i].ilosc*przedmioty[i].cena;
+	}
+	cout<<endl<<"Maksymalna wartosc przedmiotow, ktore mieszcza sie w plecaku wg algorytmu zachlannego: "<< wartosc <<endl;
+
+	cout<<"Przedmioty znajdujace sie w plecaku i ich wartosci:"<<endl;
+	
+	int lp=1;
+	for(int i=0; i<ilosc_przedmiotow; ++i) {
+		int ilosc_zapis=przedmioty[i].ilosc;
+		while(przedmioty[i].ilosc) {
+			cout<<lp<<". "<<przedmioty[i].nazwa<<", wartosc: "<<przedmioty[i].cena<<", waga: "<<przedmioty[i].waga<<endl;
+			przedmioty[i].ilosc--;
+			lp++;
+		}
+		przedmioty[i].ilosc=ilosc_zapis;
+	}
 }

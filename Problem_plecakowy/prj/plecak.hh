@@ -20,9 +20,11 @@ using namespace std;
 class plecak {
 	
 	struct rzecz {
-		string * nazwa;
-    	int * waga;
-    	int * cena;
+		string nazwa;
+    	int waga;
+    	int cena;
+		float cena_waga; //stosunek ceny do wagi
+		int ilosc;
 	};
 		
 	int pojemnosc_plecaka;
@@ -35,9 +37,13 @@ class plecak {
 public:
 	void dodaj_przedmioty();
 	void dodaj_przedmioty(string nazwy[], int wagi[], int ceny[]);
+
 	void algorytm_dynamiczny();
 	void wypisz_tablice();
-	void wynik();
+	void wynik_dynamiczny();
+
+	void algorytm_zachlanny();
+	void wynik_zachlanny();
 
 	plecak(int pojemnosc, int ilosc);
 	~plecak();
