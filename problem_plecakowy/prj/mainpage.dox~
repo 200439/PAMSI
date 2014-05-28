@@ -1,0 +1,9 @@
+/*! \mainpage Problem plecakowy
+ *
+ * \author 200439
+ *
+ *
+ * Program, w ktorym zaimplementowany jest algorytm dynamiczny rozwiazania problemu plecakowego dla dwoch przypadkow: zlodzieja, chcacego 
+ * wyniesc jak najdrozsze lupy, oraz biwakowicza, ktory zabiera najbardziej przydatne przedmioty.
+ * Kompilacja programu: make. Uruchomienie programu: ./plecak
+ */
