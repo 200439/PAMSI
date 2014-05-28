@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Graf - macierz sasiedztwa: graf Class Reference</title>
+<title>Grafy: graf Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Graf - macierz sasiedztwa
+   <div id="projectname">Grafy
    
    </div>
    
@@ -100,8 +100,8 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2118758218625a70d32dcf01044df4ea"></a><!-- doxytag: member="graf::stworz_macierz" ref="a2118758218625a70d32dcf01044df4ea" args="(char **macierz)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>stworz_macierz</b> (char **macierz)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35100a3bdbd10cc6b910661a949810e6"></a><!-- doxytag: member="graf::dodaj_wierzcholek" ref="a35100a3bdbd10cc6b910661a949810e6" args="(int v)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>dodaj_wierzcholek</b> (int v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fc141599c22f17b0e78b0e69ef0030c"></a><!-- doxytag: member="graf::dodaj_wierzcholek" ref="a9fc141599c22f17b0e78b0e69ef0030c" args="(int v, int x, int y)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>dodaj_wierzcholek</b> (int v, int x, int y)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc5aa4ebf7a250bdc26e082d8e529acf"></a><!-- doxytag: member="graf::dodaj_krawedz" ref="adc5aa4ebf7a250bdc26e082d8e529acf" args="(int v1, int v2, int w)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>dodaj_krawedz</b> (int v1, int v2, int w)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe0ff8a414e519b22d80a637b6a1b7b9"></a><!-- doxytag: member="graf::usun_wierzcholek" ref="abe0ff8a414e519b22d80a637b6a1b7b9" args="(int v)" -->
@@ -110,14 +110,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>usun_wierzcholek</b> 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>usun_krawedz</b> (int v1, int v2)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6698c3f84ab5523ecd862c67d12500c"></a><!-- doxytag: member="graf::czy_polaczone" ref="af6698c3f84ab5523ecd862c67d12500c" args="(int v1, int v2)" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>czy_polaczone</b> (int v1, int v2)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81ba0576d3d2b08441dcc11eea9bfdd8"></a><!-- doxytag: member="graf::sasiedztwo" ref="a81ba0576d3d2b08441dcc11eea9bfdd8" args="(int v)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sasiedztwo</b> (int v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c8edf16b06f737e6406afd8b78a3ce5"></a><!-- doxytag: member="graf::wypisz_sasiedztwo" ref="a4c8edf16b06f737e6406afd8b78a3ce5" args="(int v)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wypisz_sasiedztwo</b> (int v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a262c82b6c019e45cc273b1d24b88a0"></a><!-- doxytag: member="graf::sasiedztwo" ref="a9a262c82b6c019e45cc273b1d24b88a0" args="(int v)" -->
+vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sasiedztwo</b> (int v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02a49e16cb914a0e1156f61536a75b3a"></a><!-- doxytag: member="graf::nastepny_w_glab" ref="a02a49e16cb914a0e1156f61536a75b3a" args="(int v)" -->
 int&#160;</td><td class="memItemRight" valign="bottom"><b>nastepny_w_glab</b> (int v)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d2f807964ecedb5bc8e731a81e86946"></a><!-- doxytag: member="graf::w_glab" ref="a7d2f807964ecedb5bc8e731a81e86946" args="(int v1, int v2)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>w_glab</b> (int v1, int v2)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb6519bf2325ac6d4ea38512b1d78eab"></a><!-- doxytag: member="graf::wszerz" ref="afb6519bf2325ac6d4ea38512b1d78eab" args="(int v1, int v2)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wszerz</b> (int v1, int v2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b8208f6dc409c1896676b9ae6f3e922"></a><!-- doxytag: member="graf::A_star" ref="a3b8208f6dc409c1896676b9ae6f3e922" args="(int v1, int v2)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>A_star</b> (int v1, int v2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8806936c577edfc5892693e6a5e658ff"></a><!-- doxytag: member="graf::odszukaj_krawedz" ref="a8806936c577edfc5892693e6a5e658ff" args="(int v1, int v2)" -->
+graf::krawedz&#160;</td><td class="memItemRight" valign="bottom"><b>odszukaj_krawedz</b> (int v1, int v2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ac35d465cd1a0b3e9bc6dc31462ba7a"></a><!-- doxytag: member="graf::odszukaj_na_liscie" ref="a6ac35d465cd1a0b3e9bc6dc31462ba7a" args="(vector&lt; int &gt; lista, int v)" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>odszukaj_na_liscie</b> (vector&lt; int &gt; lista, int v)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e2a336e666cad995cb03fc6fc64aef2"></a><!-- doxytag: member="graf::sciezka" ref="a9e2a336e666cad995cb03fc6fc64aef2" args="(int v1, int v2)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>sciezka</b> (int v1, int v2)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4a943271723563c1e3801b9c9cd23ba"></a><!-- doxytag: member="graf::odleglosc" ref="aa4a943271723563c1e3801b9c9cd23ba" args="(int v1, int v2)" -->
+int&#160;</td><td class="memItemRight" valign="bottom"><b>odleglosc</b> (int v1, int v2)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba9e148b3a8916345e88a7e0874fbe10"></a><!-- doxytag: member="graf::wierzcholki" ref="aba9e148b3a8916345e88a7e0874fbe10" args="" -->
@@ -151,7 +163,7 @@ stack&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>stos_w_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 21 2014 23:47:33 for Graf - macierz sasiedztwa by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 20:10:24 for Grafy by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

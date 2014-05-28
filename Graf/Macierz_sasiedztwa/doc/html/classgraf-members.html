@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Graf - macierz sasiedztwa: Member List</title>
+<title>Grafy: Member List</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Graf - macierz sasiedztwa
+   <div id="projectname">Grafy
    
    </div>
    
@@ -80,12 +80,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 This is the complete list of members for <a class="el" href="classgraf.html">graf</a>, including all inherited members.<table>
+  <tr bgcolor="#f0f0f0"><td><b>A_star</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>czy_polaczone</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>dodaj_krawedz</b>(int v1, int v2, int w) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
-  <tr bgcolor="#f0f0f0"><td><b>dodaj_wierzcholek</b>(int v) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>dodaj_wierzcholek</b>(int v, int x, int y) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>krawedzie</b> (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>nastepny_w_glab</b>(int v) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>odleglosc</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>odszukaj_krawedz</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>odszukaj_na_liscie</b>(vector&lt; int &gt; lista, int v) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>sasiedztwo</b>(int v) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>sciezka</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>stos_w_glab</b> (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>stworz_macierz</b>(char **macierz) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>usun_krawedz</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
@@ -93,6 +98,7 @@ This is the complete list of members for <a class="el" href="classgraf.html">gra
   <tr bgcolor="#f0f0f0"><td><b>w_glab</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>wierzcholki</b> (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>wszerz</b>(int v1, int v2) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
+  <tr bgcolor="#f0f0f0"><td><b>wypisz_sasiedztwo</b>(int v) (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td></td></tr>
   <tr bgcolor="#f0f0f0"><td><b>~graf</b>() (defined in <a class="el" href="classgraf.html">graf</a>)</td><td><a class="el" href="classgraf.html">graf</a></td><td><code> [inline]</code></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
@@ -112,7 +118,7 @@ This is the complete list of members for <a class="el" href="classgraf.html">gra
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 21 2014 23:47:33 for Graf - macierz sasiedztwa by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 28 2014 20:10:24 for Grafy by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

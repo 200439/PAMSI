@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstdlib>
 #include <stack>
+#include <math.h>
 
 /*!
  * \file 
@@ -22,11 +23,13 @@ class graf {
 	 *
 	 */
 	struct wierzcholek {
-		wierzcholek * sasiad;
+		wierzcholek * rodzic;
 		int wartosc;
-
 		bool odwiedzony;
+		int g, h, f;
+		int wspolrzedna_x, wspolrzedna_y;
 	};
+
 
 	/* \brief Struktura definiujaca krawedz grafu
 	 *
@@ -53,18 +56,25 @@ class graf {
 	vector<krawedz> krawedzie;
 		
 		void stworz_macierz(char ** macierz);										
-		void dodaj_wierzcholek(int v);		
+		void dodaj_wierzcholek(int v, int x, int y);		
 		void dodaj_krawedz(int v1, int v2, int w);				
 		void usun_wierzcholek(int v);						
 		void usun_krawedz(int v1, int v2);							
-		bool czy_polaczone(int v1, int v2);							
-		void sasiedztwo(int v);
+		bool czy_polaczone(int v1, int v2);
+		void wypisz_sasiedztwo(int v);					
+		vector<int> sasiedztwo(int v);
 	
 		// Przeszukiwanie:
 		stack<int> stos_w_glab;
 		int nastepny_w_glab(int v);
 		void w_glab(int v1, int v2); 	//DFS - deapth first search
 		void wszerz(int v1, int v2); 	//BFS - breadth first search
+
+		void A_star(int v1, int v2);
+		graf::krawedz odszukaj_krawedz(int v1, int v2);
+		bool odszukaj_na_liscie(vector <int> lista, int v);
+		void sciezka(int v1, int v2);
+		int odleglosc(int v1, int v2);
 
 	~graf() { delete[] macierz_sasiedztwa;};
 };

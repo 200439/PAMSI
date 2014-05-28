@@ -1,9 +1,9 @@
-/*! \mainpage Grafy - macierz sasiedztwa
+/*! \mainpage Grafy
  *
  * \author 200439
  *
  *
- * Program, w ktorym zaimplementowany jest graf oraz dwie metody jego trawersowania - przeszukiwanie DFS oraz BFS. Niestety nie udalo sie 
- * jeszcze zaimplementowac algorytmu A*, co zostanie zrobione w przyszlym tygodniu.
+ * Program, w ktorym zaimplementowany jest graf oraz dwie metody jego trawersowania - przeszukiwanie DFS oraz BFS. Natomiast algorytm A* 
+ * pozwala na odnalezienie najkrotszej sciezki miedzy dwoma wierzcholkami grafu.
  * Kompilacja programu: make. Uruchomienie programu: ./graf
  */
